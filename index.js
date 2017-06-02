@@ -42,8 +42,7 @@ module.exports = function (options) {
         self.emit('end');
       })
       .catch(function (error) {
-        console.log(error);
-        self.emit('end');
+        self.emit('error', error);
       });
   };
   return es.through(aggregate, scramble);
