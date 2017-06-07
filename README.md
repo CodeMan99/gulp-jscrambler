@@ -25,12 +25,12 @@ Here's an example of how Jscrambler task should look like:
 
 ```js
 var gulp = require('gulp');
-var jScrambler = require('gulp-jscrambler');
+var jscrambler = require('gulp-jscrambler');
 
-gulp.task('default', function () {
+gulp.task('default', function (done) {
   gulp
     .src('app/**/*.js')
-    .pipe(jScrambler({
+    .pipe(jscrambler({
       keys: {
         accessKey: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
         secretKey: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
@@ -41,11 +41,12 @@ gulp.task('default', function () {
           name: 'whitespaceRemoval'
         },
         {
-          name: 'charToTernaryOperator'
+          name: 'stringSplitting'
         }
       ]
     }))
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('dist/'))
+    .on('end', done);
 });
 ```
 
