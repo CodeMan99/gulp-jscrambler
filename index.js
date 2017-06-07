@@ -7,16 +7,14 @@ var jScrambler = require('jscrambler').default;
 var path = require('path');
 
 module.exports = function (options) {
-  var files = {};
-  var filesSrc = [];
-
   options = defaults(options || {}, {
     keys: {}
   });
+
+  var filesSrc = [];
   var aggregate = function (file) {
     if (file.contents) {
       filesSrc.push(file);
-      files[path.relative(process.cwd(), file.path)] = file;
     }
   };
   var scramble = function () {
@@ -44,8 +42,7 @@ module.exports = function (options) {
         self.emit('end');
       })
       .catch(function (error) {
-        console.log(error);
-        self.emit('end');
+        self.emit('error', error);
       });
   };
   return es.through(aggregate, scramble);
