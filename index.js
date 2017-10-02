@@ -29,7 +29,8 @@ module.exports = function (options) {
         applicationId: options.applicationId,
         host: options.host,
         port: options.port,
-        params: options.params
+        params: options.params,
+        jscramblerVersion: options.jscramblerVersion
       }, function (buffer, file) {
         var cwd = options && options.cwd || process.cwd();
         var relativePath = path.relative(cwd, file);
