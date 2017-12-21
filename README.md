@@ -1,3 +1,5 @@
+### Warning: This project was moved to another repository. You can find Jscrambler's Javascript client and integrations [here](https://github.com/jscrambler/jscrambler).
+
 # ![jscrambler](https://rawgithub.com/jscrambler/gulp-jscrambler/master/media/jscrambler-logo.png)
 [gulp](https://github.com/wearefractal/gulp)-jscrambler
 --------------------
