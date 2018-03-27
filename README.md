@@ -1,4 +1,9 @@
-### Warning: This project was moved to another repository. You can find Jscrambler's Javascript client and integrations [here](https://github.com/jscrambler/jscrambler).
+## Warning: This project has been moved to [another repository](https://github.com/jscrambler/jscrambler/tree/master/packages/gulp-jscrambler).
+
+#### If you need to integrate your application with Jscrambler please read [our documentation](https://docs.jscrambler.com/code-integrity/documentation/api).
+
+#### You can find Jscrambler's client and integrations [here](https://github.com/jscrambler/jscrambler).
+------------------------------------------------------------------------------
 
 # ![jscrambler](https://rawgithub.com/jscrambler/gulp-jscrambler/master/media/jscrambler-logo.png)
 [gulp](https://github.com/wearefractal/gulp)-jscrambler
